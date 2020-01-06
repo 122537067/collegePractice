@@ -1,0 +1,11 @@
+E:\C#\SellTicket\Station\bin\Debug\Station.exe.config
+E:\C#\SellTicket\Station\bin\Debug\Station.exe
+E:\C#\SellTicket\Station\bin\Debug\Station.pdb
+E:\C#\SellTicket\Station\obj\Debug\Station.exe
+E:\C#\SellTicket\Station\obj\Debug\Station.pdb
+E:\ComputerOS\实验5 Windows下的线程同步\SellTicket\Station\bin\Debug\Station.exe.config
+E:\ComputerOS\实验5 Windows下的线程同步\SellTicket\Station\obj\Debug\Station.exe
+E:\ComputerOS\实验5 Windows下的线程同步\SellTicket\Station\obj\Debug\Station.pdb
+E:\ComputerOS\实验5 Windows下的线程同步\SellTicket\Station\bin\Debug\Station.exe
+E:\ComputerOS\实验5 Windows下的线程同步\SellTicket\Station\bin\Debug\Station.pdb
+E:\ComputerOS\实验5 Windows下的线程同步\SellTicket\Station\obj\Debug\Station.csprojResolveAssemblyReference.cache

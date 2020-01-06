@@ -1,0 +1,58 @@
+﻿@charset "utf-8";
+html,body{margin:0;padding:0;width:100%;}
+body{font-size:12px;font-family: "verdana,helvetica,arial,sans-serif,宋体";color:#333;line-height:160%;height:100%;}
+p,ul,.name,.pwd,dd,h1,h2,h3,form,input,select,textarea{margin:0;padding:0;border:0;font-family:"微软雅黑";line-height:150%;}
+ul,li{list-style:none;}
+div,p{word-wrap: break-word;}
+img{border: none;}
+input,button,select,textarea{outline:none}
+
+.icon-memeber{
+	background:url('icons/memeber.gif') no-repeat center center;
+}
+
+/*login*/
+.login
+{  
+    width:100%;
+    height:310px;
+    margin:100px 0 0 0;
+    background: url(images/login_body.png) repeat-x left top;
+}
+
+.login .box
+{
+    position:relative;
+    z-index:100;
+    margin:0 auto;
+    width:581px;
+    height:310px;
+    background:url(images/login_content.png) center top no-repeat;
+}
+
+.login .title
+{
+    padding:15px 0 0 30px;
+    FONT-WEIGHT: bolder; 
+    FONT-SIZE: 28px;
+    color:#1b76b5;
+}
+
+.login .input
+{
+    position:relative;
+    left:140px;
+    top:80px;
+    font-size:14px;
+}
+
+.login .buttons
+{
+    position:relative;
+    left:380px;
+    top:110px;
+}
+
+.login label{display:inline-block;width:70px;text-align:right;padding-right:20px;vertical-align:middle;}
+.login .name{padding:10px 5px;font-size:14px;}
+.login .pwd{padding:10px 5px;font-size:14px;}

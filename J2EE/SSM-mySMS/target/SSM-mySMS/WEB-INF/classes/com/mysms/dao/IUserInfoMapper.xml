@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 关联的mapper对象 -->
+<mapper namespace="com.mysms.dao.IUserInfoDao">
+
+    <!-- 自定义返回结果集 -->
+    <resultMap id="userMap" type="com.mysms.model.UserInfo">
+        <id property="id" column="Id" javaType="java.lang.Integer"/>
+        <result property="username" column="username" javaType="java.lang.String"/>
+        <result property="password" column="password" javaType="java.lang.String"/>
+    </resultMap>
+
+    <resultMap id="roleMap" type="com.mysms.model.RoleInfo">
+        <id property="id" column="Id" javaType="java.lang.Integer"/>
+        <result property="name" column="name" javaType="java.lang.String"/>
+    </resultMap>
+
+    <!-- 添加数据的Statements，对于数据表中自增长列，用useGeneratedKeys告诉MyBatis，会自动取出该列数据 -->
+    <insert id="insertUser" useGeneratedKeys="true" keyProperty="id">
+        insert into UserInfo (Username,Password) values (#{username},#{password})
+    </insert>
+
+    <update id="updateUser" >
+        update UserInfo set Username=#{username},Password=#{password} where Id=#{id}
+    </update>
+
+    <delete id="deleteUser" parameterType="int">
+        delete from UserInfo where Id=#{id}
+    </delete>
+
+    <!-- parameterType属性指明查询时使用的参数类型 -->
+    <select id="selectUserById" parameterType="int" resultMap="userMap">
+        select * from UserInfo where Id=#{id}
+    </select>
+
+    <select id="selectAllUser" resultMap="userMap">
+        select * from UserInfo
+    </select>
+
+    <select id="selectUserByUsername" resultMap="userMap">
+        select * from UserInfo where Username=#{username}
+    </select>
+
+    <select id="loadPermissions" parameterType="int" resultMap="roleMap">
+        select * from RoleInfo where Id in (select RoleInfoId from user_role where UserInfoId=#{userId})
+    </select>
+
+</mapper>

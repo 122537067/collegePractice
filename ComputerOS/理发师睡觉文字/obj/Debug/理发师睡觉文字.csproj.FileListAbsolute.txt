@@ -1,0 +1,6 @@
+E:\ComputerOS\理发师睡觉文字\bin\Debug\理发师睡觉文字.exe.config
+E:\ComputerOS\理发师睡觉文字\obj\Debug\理发师睡觉文字.csprojResolveAssemblyReference.cache
+E:\ComputerOS\理发师睡觉文字\bin\Debug\理发师睡觉文字.exe
+E:\ComputerOS\理发师睡觉文字\bin\Debug\理发师睡觉文字.pdb
+E:\ComputerOS\理发师睡觉文字\obj\Debug\理发师睡觉文字.exe
+E:\ComputerOS\理发师睡觉文字\obj\Debug\理发师睡觉文字.pdb

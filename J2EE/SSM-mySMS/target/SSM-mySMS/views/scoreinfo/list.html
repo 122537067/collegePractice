@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>成绩管理</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+	<link href="/resources/jquery-easyui-1.5.2/themes/default/easyui.css" rel="stylesheet">
+    <link href="/resources/jquery-easyui-1.5.2/themes/icon.css" rel="stylesheet">
+    
+    <link href="/resources/themes/icons.css" rel="stylesheet">
+	<link href="/resources/themes/site.css" rel="stylesheet">
+
+    <script src="/resources/jquery-easyui-1.5.2/jquery.min.js"></script>
+    <script src="/resources/jquery-easyui-1.5.2/jquery.easyui.min.js"></script>
+	<script src="/resources/jquery-easyui-1.5.2/locale/easyui-lang-zh_CN.js"></script>
+	
+	<script src="/resources/sms/msgbox.js"></script>
+	<script src="/resources/sms/date.js"></script>
+	<script src="/resources/sms/data.js"></script>
+</head>
+<body class="easyui-layout">
+    <!-- 工具栏 -->
+    <div data-options="region:'north',border:true,title:''">
+        <div style="padding:2px;float:left;height:26px;">
+            <a href="javascript:void(0)" id="addScore" class="easyui-linkbutton" iconCls="icon-add"  onclick="addScore();">添加成绩</a>
+            <a href="javascript:void(0)" id="deleteScore" class="easyui-linkbutton" iconCls="icon-cancel"  onclick="deleteScore();">删除成绩</a>
+            <a href="javascript:void(0)" id="editScore" class="easyui-linkbutton" iconCls="icon-edit"  onclick="editScore();">修改成绩</a>
+        	<a href="javascript:void(0)" id="detailScore" class="easyui-linkbutton" iconCls="icon-details"  onclick="detailScore();">查看成绩</a>
+        </div>
+    </div>
+
+    <!-- 数据面板 -->
+    <div data-options="region:'center',border:true,fit:false" style="padding-right:5px;">
+        <table id='ScoreInfo' style='width:100%;'>
+        	<thead>
+        		<tr>
+        			<th field='id' hidden='true'>ID</th>
+        			<th data-options="field:'ck',checkbox:true"></th>
+                    <th field='stuName' >学生</th>
+                    <th field='lessonName'>课程</th>
+                    <th field="score">分数</th>
+        		</tr>
+        	</thead>
+        </table>
+    </div>
+
+    <!-- 查询面板 -->
+    <div data-options="region:'east',collapsed:true,split:true,title:'查询面板'" style="width:380px;">
+
+    </div>
+
+<script type="text/javascript">
+
+	function addScore(){
+		// id=0没有意义，只是防止showWindow方法在末尾添加/
+		var url = '/scoreinfo/add?id=0';
+		showWindow('添加成绩', url,'icon-add', 'ScoreInfo','datagrid',false);
+	}
+	
+	function deleteScore(){
+		var row = $('#ScoreInfo').datagrid('getSelected');
+		if (row != null) {
+			$.messager.confirm('提示', '删除之后不可恢复，您确定要删除吗？', function (r) {
+				if (r) {
+					$.post("/scoreinfo/delete", { "id": row.id },function (data) {
+						if (data === "\"success\"") {
+							window.top.showInfo("删除成功");
+							$('#ScoreInfo').datagrid('reload');
+							$('#ScoreInfo').datagrid('uncheckAll');
+						} else {
+							window.top.showError(data);
+						}
+					});
+				}
+			});
+		} else {
+			window.top.showInfo("请选择要删除的数据！");
+		}
+	}
+	
+	function editScore(){
+		var row = $('#ScoreInfo').datagrid('getSelected');
+		if (row != null) {
+			var title = "修改成绩--"+row.name;
+			showWindow(title, '/scoreinfo/getedit?id='+row.id, 'icon-edit','ScoreInfo','datagrid',false);
+		}else {
+			window.top.showInfo("请选择修改成绩的数据！");
+		}
+	}
+	
+	function detailScore(){
+		var row = $('#ScoreInfo').datagrid('getSelected');
+		if (row != null) {
+			var title = "查看成绩--"+row.name;
+			showWindow(title, '/scoreinfo/getdetail?id='+row.id, 'icon-details','ScoreInfo','datagrid',false);
+		}else {
+			window.top.showInfo("请选择查看成绩的数据！");
+		}
+	}
+	
+</script>
+<script>
+	$(function () {
+		$('#ScoreInfo').datagrid( {
+			fitColumns: true,
+			rownumbers: true,
+			pagination: true,
+			striped: true,
+			singleSelect: true,
+			idField: 'Id',
+			loadMsg: '成绩加载中，请稍候...',
+			url: '/scoreinfo/list',
+			pageSize: 10,
+			pageList: [4,5,10,20,30,50,100,200],
+			title: '成绩信息',
+			queryParams: {},
+			onLoadError: function (arguments) {
+				var json = arguments.responseText; 
+				window.top.showInfo(json);
+			},
+			onDblClickRow :function(rowIndex,rowData){
+				var title='查看成绩--' + rowData.name;
+				showWindow(title, '/scoreinfo/getdetail?id='+rowData.id, 'icon-details','ScoreInfo','datagrid',false);
+			},
+			onSelect:function (rowIndex, rowData){
+			},
+			onLoadSuccess:function (data){
+				
+			},
+			onUnselect:function (rowIndex, rowData){
+				
+			},
+			rowStyler: function(index, row){
+				
+			}
+		});
+	});
+</script>
+
+</body>
+</html>

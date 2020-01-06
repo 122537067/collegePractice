@@ -1,0 +1,285 @@
+@media screen and (min-width:1568px) {
+
+}
+@media screen and (max-width:1290px) {
+.i_mb dl dd {
+	width: 58%;
+}
+
+}
+@media screen and (max-width:1190px) {
+.i_mb dl dd {
+	width: 56%;
+}
+
+}
+@media screen and (max-width:1175px) {
+.im_r {
+	width: 64%;
+}
+
+}
+@media screen and (max-width:1140px) {
+.pc_nav li{
+	padding:0 10px;
+	margin:0 5px;
+}
+
+}
+@media screen and (max-width:1130px) {
+.top .logo img {
+	height: 90%;
+}
+.i_mb dl dd {
+	width: 54%;
+}
+}
+@media screen and (max-width:1100px) {
+
+.top .logo img {
+	height: 92%;
+}	
+
+}
+@media screen and (max-width:1090px) {
+.top .logo img {
+	height: 90%;
+	margin:.5% 0;
+}	
+.s_nav li{
+	padding:0 16px;
+}
+.i_mb dl dd {
+	width: 50%;
+}
+}
+@media screen and (max-width:1040px) {
+.top .logo img {
+	height: 90%;
+	margin:.5% 0;
+}	
+.i_mb dl dd .time {
+	width:27%;
+}
+.top .wel{
+	font-size:1.5em;
+}
+.s_nav li{
+	padding:0 12px;
+}
+.fn_m .fn_r {
+	width: 80%;
+}
+
+}
+@media screen and (max-width:1020px) {
+.top .logo img {
+	height: 88%;
+	margin:.7% 0;
+}	
+.fn_m .fn_r {
+	width: 76%;
+}
+
+
+}
+@media screen and (max-width:997px) {
+
+.top .logo img {
+	height: 86%;
+	margin:.8% 0;
+}	
+.i_ml, .i_mr {
+	width: 96%;
+}
+.i_ml {
+	margin-left:2%;
+}
+.i_mb dl dd {
+	width: 70%;
+}
+.i_mr {
+	margin-right:2%;
+}
+.s_nav li{
+	font-size:16px;
+}
+}
+@media screen and (max-width:980px) {
+.top .logo img {
+	height: 84%;
+	margin:1% 0;
+}	
+
+.s_nav li{
+	margin:0 20px;
+	padding:0 5px;
+}
+}
+
+@media screen and (max-width:970px) {
+.top .logo img {
+	height: 80%;
+	margin:1% 0;
+}
+.top .info a,.top .info span,.top .info p{
+	font-size:12px;
+}
+.top .info 	{
+	margin-right:0;
+}
+}
+@media screen and (max-width:960px) {
+.top .logo img {
+	height: 76%;
+	margin:2% 0;
+}	
+
+}
+@media screen and (max-width:940px) {
+.top .logo img {
+	height: 74%;
+	margin:3% 0;
+}	
+
+.header .head {
+	height: 50px;
+}
+.head .nav li {
+	height: 50px;
+	width:15%;
+}
+.head .nav li a {
+	height: 50px;
+	line-height: 50px;
+	font-size:14px;
+}
+.pro dl, .pc_pro dl{
+	width: 96%;
+}
+.cotnact ul li {
+	width: 96%;
+
+}
+.im_r {
+	width: 60%;
+}
+}
+@media screen and (max-width:886px) {
+.pc_nav li{
+	padding:0 5px;
+	margin:0 5px;
+}
+}
+@media screen and (max-width:850px) {
+
+
+.pc_nav li{
+	padding:0 10px;
+	margin:0 5px;
+	font-size:16px;
+}
+}
+@media screen and (max-width:820px) {
+.pc_nav li{
+	padding:0 2px;
+	margin:0 2px;
+}
+.im_r {
+	width: 56%;
+	font-size:1.4em;
+}
+.i_mb dl dd {
+	width: 66%;
+}
+.fn_m .fn_l {
+	width:15%;
+	font-size: 16px;
+}
+.fn_m .fn_r {
+	width: 70%;
+}
+
+}
+@media screen and (max-width:780px) {
+.top .logo{
+	width:27%;
+}
+.top .logo img {
+	height: 58%;
+	margin:4% 0;
+}	
+
+.head .nav li .er .er_m i {
+	left: 50px;
+}
+
+}
+@media screen and (max-width:730px) {
+.im_l {
+	width: 200px;
+	height:170px;
+	line-height: 1.3em;
+}
+.im_r {
+	width: 52%;
+	font-size:1.3em;
+}
+}
+@media screen and (max-width:700px) {
+.head .nav li {
+	width:14.5%;
+}
+.head .nav li .er .er_m i {
+	left: 45px;
+}
+.top .wel{
+	font-size:1.1em;
+}
+.i_mb dl dd {
+	width: 62%;
+}
+.fn_m .fn_l {
+	font-size: 14px;
+}
+}
+@media screen and (max-width:680px) {
+.p_nav li{
+	margin:0 15px;
+	padding:0 5px;
+}
+.s_nav li{
+	font-size:13px;
+	margin:0 15px;
+	padding:0 5px;
+}
+
+}
+@media screen and (max-width:670px) {
+.top .logo{
+	width:23%;
+	margin-left:0;
+	margin-right:3px;
+}
+.top .logo img {
+	float:left;
+	width:55%;
+	height:22.5px;
+	margin:1% 10%;
+}
+.top .logo hr{
+	display:none;
+}
+}
+@media screen and (max-width:630px) {
+.pc_nav li{
+	height:40px;
+	line-height:40px;
+	font-size:13px;
+	padding:0 4px;
+	margin:0 2px;
+}
+.i_mb dl dd {
+	width: 60%;
+}
+}

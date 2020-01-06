@@ -1,0 +1,13 @@
+package com.test;
+
+import java.net.*;
+
+public class Test 
+{
+	public static void main(String args[]) throws Exception
+	{
+		ServerSocket serverSocket = new ServerSocket(9000); //创建绑定到 端口：9000 的服务器套接字
+		Socket socket = serverSocket.accept();  //侦听并接受到此套接字的连接
+		System.out.println(socket);
+	}
+}

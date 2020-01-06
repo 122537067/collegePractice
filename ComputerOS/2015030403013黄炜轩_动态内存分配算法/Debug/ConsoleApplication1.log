@@ -1,0 +1,5 @@
+﻿  源.cpp
+e:\computeros\consoleapplication1\源.cpp(3): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+e:\computeros\consoleapplication1\源.cpp(258): warning C4805: “==”: 在操作中将类型“int”与类型“bool”混合不安全
+  ConsoleApplication1.vcxproj -> E:\ComputerOS\ConsoleApplication1\Debug\ConsoleApplication1.exe
+  ConsoleApplication1.vcxproj -> E:\ComputerOS\ConsoleApplication1\Debug\ConsoleApplication1.pdb (Full PDB)

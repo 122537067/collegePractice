@@ -1,0 +1,21 @@
+package com.sms.test;
+
+import com.sms.dao.DbHelper;
+
+public class test {
+
+	private static final String db_driver = "com.mysql.jdbc.Driver";
+	private static final String url = "jdbc:mysql://localhost:3306/DbTest";
+	private static final String username = "root";
+	private static final String pwd = "123456";
+	
+	public static void main(String args[]) throws Exception
+	{
+		DbHelper db = new DbHelper(db_driver,url,username,pwd);
+		
+		db.createConnection();
+		
+		System.out.println("pass"); 
+	}
+	
+}

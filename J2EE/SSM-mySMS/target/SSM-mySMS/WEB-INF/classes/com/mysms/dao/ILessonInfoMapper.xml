@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 关联的mapper对象 -->
+<mapper namespace="com.mysms.dao.ILessonInfoDao">
+
+    <!-- 自定义返回结果集 -->
+    <resultMap id="modelMap" type="com.mysms.model.LessonInfo">
+        <id property="id" column="Id" javaType="java.lang.Integer"/>
+        <result property="code" column="Code" javaType="java.lang.String"/>
+        <result property="name" column="Name" javaType="java.lang.String"/>
+    </resultMap>
+ 
+
+    <!-- 添加数据的Statements，对于数据表中自增长列，用useGeneratedKeys告诉MyBatis，会自动取出该列数据 -->
+    <insert id="insertLessonInfo" useGeneratedKeys="true" keyProperty="id">
+        insert into LessonInfo (Code,Name) values (#{code},#{name})
+    </insert>
+
+    <update id="updateLessonInfo" >
+        update LessonInfo set Code=#{code},Name=#{name} where Id=#{id}
+    </update>
+
+    <delete id="deleteLessonInfo" parameterType="int">
+        delete from LessonInfo where Id=#{id}
+    </delete>
+
+    <!-- parameterType属性指明查询时使用的参数类型 -->
+    <select id="selectLessonInfoById" parameterType="int" resultMap="modelMap">
+        select * from LessonInfo where Id=#{id}
+    </select>
+
+    <select id="selectAllLessonInfo" resultMap="modelMap">
+        select * from LessonInfo
+    </select>
+
+    <select id="selectLessonInfoByName" parameterType="String" resultMap="modelMap">
+        select * from LessonInfo where Name=#{name}
+    </select>
+
+</mapper>

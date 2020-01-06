@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="/resources/jquery-easyui-1.5.2/themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="/resources/jquery-easyui-1.5.2/themes/icon.css">
+<script type="text/javascript" src="/resources/jquery-easyui-1.5.2/jquery.min.js"></script>
+<script type="text/javascript" src="/resources/jquery-easyui-1.5.2/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="/resources/jquery-easyui-1.5.2/locale/easyui-lang-zh_CN.js"></script>
+<title>easyui demo</title>
+</head>
+<body>
+
+	<div class="easyui-dialog" title="HTML渲染的对话框" style="width:400px;height:300px;"></div>
+	
+	<div id="mydialog"></div>
+
+	<script>
+		$(function(){
+			$("#mydialog").dialog({
+				width:400,
+				height:300,
+				title:"JS渲染的对话框"
+			});
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+c:\users\lenovo\source\repos\CJH02Schedule\bin\Debug\CJH02Schedule.exe.config
+c:\users\lenovo\source\repos\CJH02Schedule\bin\Debug\CJH02Schedule.exe
+c:\users\lenovo\source\repos\CJH02Schedule\bin\Debug\CJH02Schedule.pdb
+c:\users\lenovo\source\repos\CJH02Schedule\obj\Debug\CJH02Schedule.csprojResolveAssemblyReference.cache
+c:\users\lenovo\source\repos\CJH02Schedule\obj\Debug\CJH02Schedule.csproj.CoreCompileInputs.cache
+c:\users\lenovo\source\repos\CJH02Schedule\obj\Debug\CJH02Schedule.exe
+c:\users\lenovo\source\repos\CJH02Schedule\obj\Debug\CJH02Schedule.pdb

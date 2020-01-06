@@ -1,0 +1,9 @@
+E:\Data Structures\Study\计划生育\bin\Debug\计划生育.exe.config
+E:\Data Structures\Study\计划生育\bin\Debug\计划生育.exe
+E:\Data Structures\Study\计划生育\bin\Debug\计划生育.pdb
+E:\Data Structures\Study\计划生育\obj\Debug\计划生育.csprojResolveAssemblyReference.cache
+E:\Data Structures\Study\计划生育\obj\Debug\计划生育.Form1.resources
+E:\Data Structures\Study\计划生育\obj\Debug\计划生育.Properties.Resources.resources
+E:\Data Structures\Study\计划生育\obj\Debug\计划生育.csproj.GenerateResource.Cache
+E:\Data Structures\Study\计划生育\obj\Debug\计划生育.exe
+E:\Data Structures\Study\计划生育\obj\Debug\计划生育.pdb

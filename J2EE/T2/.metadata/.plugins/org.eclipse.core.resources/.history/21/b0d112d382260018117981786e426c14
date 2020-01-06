@@ -1,0 +1,21 @@
+package com.sms.test;
+
+import com.sms.dao.DbHelper;
+
+public class test {
+
+	private static final String db_driver = "com.sqlserver.jdbc.SQLServerDriver";
+	private static final String url = "jdbc:sqlserver://localhost:1433;DatabaseName=School";
+	private static final String username = "sa";
+	private static final String pwd = "xuan18718744979";
+	
+	public static void main(String args[]) throws Exception
+	{
+		DbHelper db = new DbHelper(db_driver,url,username,pwd);
+		
+		db.createConnection();
+		
+		System.out.println("pass"); 
+	}
+	
+}

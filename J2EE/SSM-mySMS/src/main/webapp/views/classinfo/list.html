@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>班级管理</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+	<link href="/resources/jquery-easyui-1.5.2/themes/default/easyui.css" rel="stylesheet">
+    <link href="/resources/jquery-easyui-1.5.2/themes/icon.css" rel="stylesheet">
+    
+    <link href="/resources/themes/icons.css" rel="stylesheet">
+	<link href="/resources/themes/site.css" rel="stylesheet">
+
+    <script src="/resources/jquery-easyui-1.5.2/jquery.min.js"></script>
+    <script src="/resources/jquery-easyui-1.5.2/jquery.easyui.min.js"></script>
+	<script src="/resources/jquery-easyui-1.5.2/locale/easyui-lang-zh_CN.js"></script>
+	
+	<script src="/resources/sms/msgbox.js"></script>
+	<script src="/resources/sms/date.js"></script>
+	<script src="/resources/sms/data.js"></script>
+</head>
+<body class="easyui-layout">
+    <!-- 工具栏 -->
+    <div data-options="region:'north',border:true,title:''">
+        <div style="padding:2px;float:left;height:26px;">
+            <a href="javascript:void(0)" id="addKlass" class="easyui-linkbutton" iconCls="icon-add"  onclick="addClass();">添加班级</a>
+            <a href="javascript:void(0)" id="deleteKlass" class="easyui-linkbutton" iconCls="icon-cancel"  onclick="deleteClass();">删除班级</a>
+            <a href="javascript:void(0)" id="editKlass" class="easyui-linkbutton" iconCls="icon-edit"  onclick="editClass();">修改班级</a>
+        	<a href="javascript:void(0)" id="detailKlass" class="easyui-linkbutton" iconCls="icon-details"  onclick="detailClass();">查看班级</a>
+        </div>
+    </div>
+
+    <!-- 数据面板 -->
+    <div data-options="region:'center',border:true,fit:false" style="padding-right:5px;">
+        <table id='ClassInfo' style='width:100%;'>
+        	<thead>
+        		<tr>
+        			<th field='id' hidden='true'>ID</th>
+        			<th data-options="field:'ck',checkbox:true"></th>
+        			<th field='name' >班级</th>
+        			<th field='num' >人数</th>
+        		</tr>
+        	</thead>
+        </table>
+    </div>
+
+    <!-- 查询面板 -->
+    <div data-options="region:'east',collapsed:true,split:true,title:'查询面板'" style="width:380px;">
+
+    </div>
+
+<script type="text/javascript">
+
+	function addClass(){
+		// id=0没有意义，只是防止showWindow方法在末尾添加/
+		var url = '/classinfo/add?id=0';
+		showWindow('添加班级', url,'icon-add', 'ClassInfo','datagrid',false);
+	}
+	
+	function deleteClass(){
+		var row = $('#ClassInfo').datagrid('getSelected');
+		if (row != null) {
+			$.messager.confirm('提示', '删除之后不可恢复，您确定要删除吗？', function (r) {
+				if (r) {
+					$.post("/classinfo/delete", { "id": row.id },function (data) {
+						if (data === "\"success\"") {
+							window.top.showInfo("删除成功");
+							$('#ClassInfo').datagrid('reload');
+							$('#ClassInfo').datagrid('uncheckAll');
+						} else {
+							window.top.showError(data);
+						}
+					});
+				}
+			});
+		} else {
+			window.top.showInfo("请选择要删除的数据！");
+		}
+	}
+	
+	function editClass(){
+		var row = $('#ClassInfo').datagrid('getSelected');
+		if (row != null) {
+			var title = "修改班级--"+row.name;
+			showWindow(title, '/classinfo/getedit?id='+row.id, 'icon-edit','ClassInfo','datagrid',false);
+		}else {
+			window.top.showInfo("请选择修改班级的数据！");
+		}
+	}
+	
+	function detailClass(){
+		var row = $('#ClassInfo').datagrid('getSelected');
+		if (row != null) {
+			var title = "查看班级--"+row.name;
+			showWindow(title, '/classinfo/getdetail?id='+row.id, 'icon-details','ClassInfo','datagrid',false);
+		}else {
+			window.top.showInfo("请选择查看班级的数据！");
+		}
+	}
+	
+</script>
+<script>
+	$(function () {
+		$('#ClassInfo').datagrid( {
+			fitColumns: true,
+			rownumbers: true,
+			pagination: true,
+			striped: true,
+			singleSelect: true,
+			idField: 'Id',
+			loadMsg: '班级加载中，请稍候...',
+			url: '/classinfo/list',
+			pageSize: 10,
+			pageList: [4,5,10,20,30,50,100,200],
+			title: '班级信息',
+			queryParams: {},
+			onLoadError: function (arguments) {
+				var json = arguments.responseText; 
+				window.top.showInfo(json);
+			},
+			onDblClickRow :function(rowIndex,rowData){
+				var title='查看班级--' + rowData.name;
+				showWindow(title, '/classinfo/getdetail?id='+rowData.id, 'icon-details','ClassInfo','datagrid',false);
+			},
+			onSelect:function (rowIndex, rowData){
+			},
+			onLoadSuccess:function (data){
+				
+			},
+			onUnselect:function (rowIndex, rowData){
+				
+			},
+			rowStyler: function(index, row){
+				
+			}
+		});
+	});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+package com.test;
+
+import java.io.*;
+import java.net.*;
+
+public class Test 
+{
+	public static void main(String args[]) throws Exception
+	{
+		ServerSocket serverSocket = new ServerSocket(9001); //创建绑定到 端口：9000 的服务器套接字
+		System.out.println("等待浏览器连接端口....");
+		//System.out.println(serverSocket);  //output:ServerSocket[addr=0.0.0.0/0.0.0.0,localport=9001]
+		
+		Socket socket = serverSocket.accept();  //侦听并接受到此套接字的连接
+		System.out.println("连接端口："+socket.getPort());
+		//System.out.println(socket); //output:Socket[addr=/0:0:0:0:0:0:0:1,port=55166,localport=9001]
+		
+		InputStream in = socket.getInputStream();  //从服务器端发回的数据
+		BufferedReader br = new BufferedReader(new InputStreamReader(in));  //缓冲服务器发来的数据
+		System.out.println(br);
+		
+	}
+}

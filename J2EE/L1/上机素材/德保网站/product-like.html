@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+<title>保险产品</title>
+<link rel="stylesheet" type="text/css" href="Assets/css/reset.css"/>
+<script type="text/javascript" src="Assets/js/jquery-1.8.3.min.js"></script>
+<link rel="stylesheet" type="text/css" href="Assets/css/thems.css">
+<link rel="stylesheet" type="text/css" href="Assets/css/responsive.css">
+<link rel="stylesheet" type="text/css" href="Assets/css/font-awesome.min.css"/>
+</head>
+
+<body>
+<div class="pst_bg">
+    <div class="pst" > <i class="fa fa-home"></i>您的位置： <a href="index.html" target="_Blank">首页</a>> <a href="">保险产品</a>><a href="">同类产品</a> </div>
+  </div>
+  <div class="scd clearfix">
+    <ul class="p_nav">
+      <a href="product-new.html"><li>新品推荐</li></a>
+      <a href="product-center-health.html"><li>产品中心</li></a>
+      <a href="product-freeInsurance.html"><li>免费保险</li></a>
+      <a href=""><li class="now">同类产品</li></a>
+    </ul>
+    <div class="scd_c">
+      <div class="pro clearfix">
+        <ul class="list_j">
+        	<li a="off">
+            	<span class="list_l"><i class="fa fa-stop"></i>汽车保险</span><span class="list_r"><span class="up">查看</span><span>收起</span></span>
+            </li>
+            <div class="join">
+                <table cellpadding="0" cellspacing="0" class="j_c">
+                  <tr>
+                    <th scope="col">所属保险公司</th>
+                    <th scope="col">产品名称</th>
+                    <th scope="col">保险类别</th>
+                    <th scope="col">产品特色</th>
+                    <th scope="col">主要保障内容</th>
+                    <th scope="col">价格</th>
+                  </tr>
+                  <tr>
+                    <td>太平洋保险</td>
+                    <td>“乐驾人生”驾驶员人身意外伤害保险</td>
+                    <td>意外保险</td>
+                    <td>多种组合，保障全面</td>
+                    <td>专为非营运机动车驾驶人员提供的专业指向性保险.......</td>
+                    <td>58</td>
+                  </tr>
+                  <tr>
+                    <td>太平洋保险</td>
+                    <td>“乐驾人生”驾驶员人身意外伤害保险</td>
+                    <td>意外保险</td>
+                    <td>多种组合，保障全面</td>
+                    <td>专为非营运机动车驾驶人员提供的专业指向性保险.......</td>
+                    <td>58</td>
+                  </tr>
+                </table>
+            </div>
+            <li a="off">
+            	<span class="list_l"><i class="fa fa-stop"></i>旅游保险</span><span class="list_r"><span class="up">查看</span><span>收起</span></span>
+            </li>
+            <div class="join">
+                <table cellpadding="0" cellspacing="0" class="j_c">
+                  <tr>
+                    <th scope="col">所属保险公司</th>
+                    <th scope="col">产品名称</th>
+                    <th scope="col">保险类别</th>
+                    <th scope="col">产品特色</th>
+                    <th scope="col">主要保障内容</th>
+                    <th scope="col">价格</th>
+                  </tr>
+                  <tr>
+                    <td>太平洋保险</td>
+                    <td>“乐驾人生”驾驶员人身意外伤害保险</td>
+                    <td>意外保险</td>
+                    <td>多种组合，保障全面</td>
+                    <td>专为非营运机动车驾驶人员提供的专业指向性保险.......</td>
+                    <td>58</td>
+                  </tr>
+                  <tr>
+                    <td>太平洋保险</td>
+                    <td>“乐驾人生”驾驶员人身意外伤害保险</td>
+                    <td>意外保险</td>
+                    <td>多种组合，保障全面</td>
+                    <td>专为非营运机动车驾驶人员提供的专业指向性保险.......</td>
+                    <td>58</td>
+                  </tr>
+                </table>
+            </div>
+            <li a="off">
+            	<span class="list_l"><i class="fa fa-stop"></i>意外保险</span><span class="list_r"><span class="up">查看</span><span>收起</span></span>
+            </li>
+            
+        </ul>
+      </div>
+      </div>
+<script>	
+$(".join").hide();
+/*$('.pro>ul>li').click(function(){
+		var index=$(this).index();
+		$('.pro>ul>div').eq(index).slideToggle();
+	});*/
+$(".list_j>li").click(function(){
+	var index=$(".list_j>li").index(this);
+	$(".join").eq(index).slideToggle();
+});
+$(".list_j>li").mousedown(function(event) {
+	var n=$(".list_j>li").index(this);
+		if ($(this).attr("a") == "off") {
+			$(".list_r .up:eq("+n+")").hide().siblings().show();
+			$(this).attr("a","on")
+		}else {
+			$(".list_r .up:eq("+n+")").show().siblings().hide();
+			$(this).attr("a","off")
+		}
+});	
+</script>
+</body>
+</html>

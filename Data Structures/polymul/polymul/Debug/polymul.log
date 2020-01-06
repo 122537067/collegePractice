@@ -1,0 +1,6 @@
+﻿  源.cpp
+e:\data structures\polymul\polymul\源.cpp(27): warning C4101: “coef”: 未引用的局部变量
+e:\data structures\polymul\polymul\源.cpp(27): warning C4101: “exp”: 未引用的局部变量
+e:\data structures\polymul\polymul\源.cpp(26): warning C4101: “p”: 未引用的局部变量
+  polymul.vcxproj -> E:\Data Structures\polymul\Debug\polymul.exe
+  polymul.vcxproj -> E:\Data Structures\polymul\Debug\polymul.pdb (Full PDB)

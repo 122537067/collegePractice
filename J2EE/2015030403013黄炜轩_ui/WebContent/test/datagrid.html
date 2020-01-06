@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="/resources/jquery-easyui-1.5.2/themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="/resources/jquery-easyui-1.5.2/themes/icon.css">
+<script type="text/javascript" src="/resources/jquery-easyui-1.5.2/jquery.min.js"></script>
+<script type="text/javascript" src="/resources/jquery-easyui-1.5.2/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="/resources/jquery-easyui-1.5.2/locale/easyui-lang-zh_CN.js"></script>
+<title>easyui demo</title>
+</head>
+<body class="easyui-layout">
+
+	<div data-options="region:'north'" style="height:60px;overflow:hidden;">
+		<div style="text-align:center;font-size:2.2em;color:blue;padding:10px;">学员管理系统</div>
+	</div>
+	
+	<div data-options="region:'west'" style="width:220px" title="所有功能">
+		<ul id="menu" class="easyui-tree"></ul>
+	</div>
+	
+	<div data-options="region:'center'" title="班级信息">
+		<div id="mainTab" class="easyui-tabs" style="width:99%;height:99%;overflow:hidden;">
+        </div>
+	</div>
+
+	<script>
+	
+	$(function(){
+		$("#menu").tree({
+			onClick:function(node){
+				menuClick(node);
+			},
+			data:dataMenu
+		});
+	});
+	
+	function menuClick(node){
+		if(node.attributes){
+			openTab(node.text,node.attributes.url,node.iconCls);
+		}
+	}
+	
+	function openTab(text,url,iconCls){
+		if($("#mainTab").tabs('exists',text)){
+			$("#mainTab").tabs('select',text);
+		}else{
+			var content="<iframe frameborder='0' scrolling='auto' style='width:100%;height:100%' src="+url+"></iframe>";
+			$("#mainTab").tabs('add',{
+				title:text,
+				closable:true,
+				content:content,
+				iconCls:iconCls,
+			});
+		}
+	}
+	
+	var dataMenu = [
+         	{
+         		"id":1,
+         		"text":"学员管理",
+         		"children":[{
+         				"id":11,
+         				"text":"班级管理",
+         				"iconCls":"icon-add",
+         				"attributes":{"url":"classinfo.html"}
+         			},
+         			{
+         				"id":12,
+         				"text":"学员管理",
+         				"iconCls":"icon-edit",
+         				"attributes":{"url":"test.html"}
+         			},
+         			{
+         				"id":13,
+         				"text":"课程管理"
+         			},
+         			{
+         				"id":14,
+         				"text":"成绩管理"
+         			}]
+         	},
+         	{
+         		"id":2,
+         		"text":"系统管理",
+         		"children":[{
+         				"id":21,
+         				"text":"用户管理"
+         			},
+         			{
+         				"id":22,
+         				"text":"角色管理"
+         			},
+         			{
+         				"id":23,
+         				"text":"权限管理"
+         			}]
+         		}];
+
+	</script>
+</body>
+</html>

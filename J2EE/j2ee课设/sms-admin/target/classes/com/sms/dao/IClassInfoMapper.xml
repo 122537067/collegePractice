@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 关联的mapper对象 -->
+<mapper namespace="com.sms.dao.IClassInfoDao">
+    
+<!-- 自定义返回结果集 -->
+<resultMap id="modelMap" type="com.sms.model.ClassInfo">
+	<id property="id" column="Id" javaType="java.lang.Long"></id>
+	<result property="name" column="Name" javaType="java.lang.String"></result>
+</resultMap>
+ 
+
+<!-- 添加数据的Statements，对于数据表中自增长列，用useGeneratedKeys告诉MyBatis，会自动取出该列数据 -->
+<insert id="insertClassInfo" useGeneratedKeys="true" keyProperty="id">
+    insert into ClassInfo (Name) values (#{name})
+</insert>
+
+<update id="updateClassInfo" >
+  update ClassInfo set Name=#{name} where Id=#{id}
+</update>
+
+<delete id="deleteClassInfo" parameterType="long">
+ delete from ClassInfo where Id=#{id}  
+</delete>
+
+<!-- parameterType属性指明查询时使用的参数类型 -->
+<select id="selectClassInfoById" parameterType="long" resultMap="modelMap">
+ select * from ClassInfo where Id=#{id}
+</select>
+
+<select id="selectAllClassInfo" resultMap="modelMap">
+ select * from ClassInfo
+</select>
+
+
+</mapper>

@@ -1,0 +1,5 @@
+﻿  univeral.cpp
+e:\data structures\study\universal character\univeral.cpp(6): warning C4566: 由通用字符名称“\u00E2”表示的字符不能在当前代码页(936)中表示出来
+e:\data structures\study\universal character\univeral.cpp(5): warning C4101: “körper”: 未引用的局部变量
+  universal character.vcxproj -> E:\Data Structures\Study\universal character\Debug\universal character.exe
+  universal character.vcxproj -> E:\Data Structures\Study\universal character\Debug\universal character.pdb (Full PDB)

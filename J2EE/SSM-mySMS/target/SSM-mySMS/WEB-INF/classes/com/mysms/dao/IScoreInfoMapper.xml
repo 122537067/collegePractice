@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 关联的mapper对象 -->
+<mapper namespace="com.mysms.dao.IScoreInfoDao">
+
+    <!-- 自定义返回结果集 -->
+    <resultMap id="modelMap" type="com.mysms.model.ScoreInfo">
+        <id property="id" column="Id" javaType="java.lang.Integer"/>
+        <result property="stuId" column="stuId" javaType="java.lang.Integer"/>
+        <result property="stuName" column="stuName" javaType="java.lang.String"/>
+        <result property="lessonId" column="lessonId" javaType="java.lang.Integer"/>
+        <result property="lessonName" column="lessonName" javaType="java.lang.String"/>
+        <result property="score" column="score" javaType="java.lang.Double"/>
+    </resultMap>
+ 
+
+    <!-- 添加数据的Statements，对于数据表中自增长列，用useGeneratedKeys告诉MyBatis，会自动取出该列数据 -->
+    <insert id="insertScoreInfo" useGeneratedKeys="true" keyProperty="id">
+        insert into ScoreInfo (stuId,lessonId,score) values (#{stuId},#{lessonId},#{score})
+    </insert>
+
+    <update id="updateScoreInfo" >
+        update ScoreInfo set stuId=#{stuId},lessonId=#{lessonId},score=#{score} where Id=#{id}
+    </update>
+
+    <delete id="deleteScoreInfo" parameterType="int">
+        delete from ScoreInfo where Id=#{id}
+    </delete>
+
+    <!-- parameterType属性指明查询时使用的参数类型 -->
+    <select id="selectScoreInfoById" parameterType="int" resultMap="modelMap">
+        SELECT
+        sc.id Id,
+        sc.stuid stuId,
+        sc.lessonid lessonId,
+        sc.score score,
+        st.id stid,
+        st.name stuName,
+        l.id lid,
+        l.name lessonName
+        FROM
+        ScoreInfo sc,LessonInfo l,StuInfo st
+        WHERE
+        sc.stuid=st.id AND sc.lessonid=l.id AND sc.id=#{id}
+    </select>
+
+    <select id="selectAllScoreInfo" resultMap="modelMap">
+        SELECT
+        sc.id Id,
+        sc.stuid stuId,
+        sc.lessonid lessonId,
+        sc.score score,
+        st.id stid,
+        st.name stuName,
+        l.id lid,
+        l.name lessonName
+        FROM
+        ScoreInfo sc,LessonInfo l,StuInfo st
+        WHERE
+        sc.stuid=st.id AND sc.lessonid=l.id
+    </select>
+
+
+</mapper>

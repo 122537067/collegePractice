@@ -1,0 +1,25 @@
+package com.sms.dao;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+import com.sms.model.ClassInfo;
+
+public class ClassInfoDao extends SQLServerDao
+{
+	public void add(ClassInfo cclass) throws Exception
+	{
+		String sql = "insert into ClassInfo(No,Name) values(?,?)";
+		
+		DbHelper db = new DbHelper(db_driver,url,username,pwd);
+		
+		Map<String,Object> param = new LinkedHashMap<String,Object>();
+		param.put("NO", cclass.getNo());
+		param.put("Name", cclass.getName());
+		
+		db.createConnection();
+		db.execute(sql, param);
+		db.closeConnection();
+		
+	}
+}

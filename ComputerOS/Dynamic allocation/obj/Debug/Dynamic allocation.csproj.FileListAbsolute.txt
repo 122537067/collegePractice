@@ -1,0 +1,9 @@
+E:\ComputerOS\Dynamic allocation\bin\Debug\Dynamic allocation.exe.config
+E:\ComputerOS\Dynamic allocation\bin\Debug\Dynamic allocation.exe
+E:\ComputerOS\Dynamic allocation\bin\Debug\Dynamic allocation.pdb
+E:\ComputerOS\Dynamic allocation\obj\Debug\Dynamic allocation.csprojResolveAssemblyReference.cache
+E:\ComputerOS\Dynamic allocation\obj\Debug\Dynamic_allocation.Form1.resources
+E:\ComputerOS\Dynamic allocation\obj\Debug\Dynamic_allocation.Properties.Resources.resources
+E:\ComputerOS\Dynamic allocation\obj\Debug\Dynamic allocation.csproj.GenerateResource.Cache
+E:\ComputerOS\Dynamic allocation\obj\Debug\Dynamic allocation.exe
+E:\ComputerOS\Dynamic allocation\obj\Debug\Dynamic allocation.pdb

@@ -1,0 +1,12 @@
+E:\C#\SellTicket\SellTicket\bin\Debug\SellTicket.exe.config
+E:\C#\SellTicket\SellTicket\bin\Debug\SellTicket.exe
+E:\C#\SellTicket\SellTicket\bin\Debug\SellTicket.pdb
+E:\C#\SellTicket\SellTicket\obj\Debug\SellTicket.csprojResolveAssemblyReference.cache
+E:\C#\SellTicket\SellTicket\obj\Debug\SellTicket.exe
+E:\C#\SellTicket\SellTicket\obj\Debug\SellTicket.pdb
+E:\ComputerOS\实验5 Windows下的线程同步\SellTicket\SellTicket\bin\Debug\SellTicket.exe.config
+E:\ComputerOS\实验5 Windows下的线程同步\SellTicket\SellTicket\obj\Debug\SellTicket.exe
+E:\ComputerOS\实验5 Windows下的线程同步\SellTicket\SellTicket\obj\Debug\SellTicket.pdb
+E:\ComputerOS\实验5 Windows下的线程同步\SellTicket\SellTicket\bin\Debug\SellTicket.exe
+E:\ComputerOS\实验5 Windows下的线程同步\SellTicket\SellTicket\bin\Debug\SellTicket.pdb
+E:\ComputerOS\实验5 Windows下的线程同步\SellTicket\SellTicket\obj\Debug\SellTicket.csprojResolveAssemblyReference.cache

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+     <bean id="greenInk" class="com.zhengjiaxin.dao.GreenInk"/>
+   <bean id="redInk" class="com.zhengjiaxin.dao.RedInk"/>
+   <!--对Paper的初始化 -->
+   <bean id="paper" class="com.zhengjiaxin.paper.A4Paper"/>
+    <!-- 对打印机进行配置-->
+    <bean id="printer" class="com.zhengjiaxin.printer.Print">
+       <property name="ink" ref="greenInk"></property> 
+       <property name="paper" ref="paper"></property>   
+    </bean>
+      
+</beans>

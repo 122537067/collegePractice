@@ -1,0 +1,6 @@
+E:\ComputerOS\Read_Write\bin\Debug\Read_Write.exe.config
+E:\ComputerOS\Read_Write\bin\Debug\Read_Write.exe
+E:\ComputerOS\Read_Write\bin\Debug\Read_Write.pdb
+E:\ComputerOS\Read_Write\obj\Debug\Read_Write.csprojResolveAssemblyReference.cache
+E:\ComputerOS\Read_Write\obj\Debug\Read_Write.exe
+E:\ComputerOS\Read_Write\obj\Debug\Read_Write.pdb

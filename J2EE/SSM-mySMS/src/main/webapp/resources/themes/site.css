@@ -1,0 +1,42 @@
+
+.datatable{border:1px solid #b4ccde;margin-bottom:10px;}
+.datatable caption{border:1px solid #b4ccde;border-bottom:none; background-color:#DFEAFB;text-align:left; font-weight:bold;color:#1C568A;height:18px;padding-left:5px;padding-top:5px;}
+.datatable th{ background-color:#F1F6FF;height:22px;padding-left:5px;padding-right:10px;width:30%;text-align:right;}
+.datatable td{ padding-left:5px;background-color:#FAFCFF;white-space:nowrap;}
+.datatable td input {vertical-align:middle; margin-top:-2px; margin-bottom:1px;}
+
+.infotable{border:1px solid #b4ccde;margin-bottom:10px;}
+.infotable th{ background-color:#F1F6FF;height:22px;padding-left:5px;padding-right:10px;width:20%;text-align:right;}
+.infotable td{ padding-left:5px;background-color:#FAFCFF;white-space:nowrap;width:30%;}
+
+.formitem
+{
+    width: 99%;
+    border-collapse: collapse;
+    margin-top: 3px;
+}
+
+.formitem caption
+{
+    margin: 0px;
+    padding: 3px;
+}
+
+.formitem th
+{
+    border: 1px solid #A8CFEB;
+}
+.formitem td
+{
+    background-color: #ffffff;
+    border: 1px solid #A8CFEB;
+}
+
+.info_menu{  padding:2x 10px 0 0; height:14px; margin:15px 0 0 3px; width:100px; text-align:right; float:right; }
+.info_search{ float:left; width:576px; height:26px; padding:4px 3px 4px 10px; margin:9px 0 6px 1px; background-color:#ebf3ff; border:1px solid #95bdde;}
+.info_menu a:hover{ background:none;}
+.T_m_m{ padding:4px;}
+
+.box {
+    border: 1px solid #b4ccde;
+}

@@ -1,0 +1,11 @@
+package com.sms.dao;
+
+import com.sms.model.ClassInfo;
+
+public class ClassInfoDao
+{
+	public void add(ClassInfo cclass)
+	{
+		
+	}
+}

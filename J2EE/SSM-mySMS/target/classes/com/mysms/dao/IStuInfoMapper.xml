@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 关联的mapper对象 -->
+<mapper namespace="com.mysms.dao.IStuInfoDao">
+
+    <!-- 自定义返回结果集 -->
+    <resultMap id="modelMap" type="com.mysms.model.StuInfo">
+        <id property="id" column="Id" javaType="java.lang.Integer"/>
+        <result property="no" column="No" javaType="java.lang.String"/>
+        <result property="name" column="Name" javaType="java.lang.String"/>
+        <result property="klass" column="Class" javaType="java.lang.String"/>
+    </resultMap>
+ 
+
+    <!-- 添加数据的Statements，对于数据表中自增长列，用useGeneratedKeys告诉MyBatis，会自动取出该列数据 -->
+    <insert id="insertStuInfo" useGeneratedKeys="true" keyProperty="id">
+        insert into StuInfo (No,Name,Class) values (#{no},#{name},#{klass})
+    </insert>
+
+    <update id="updateStuInfo" >
+        update StuInfo set No=#{no},Name=#{name},Class=#{klass} where Id=#{id}
+    </update>
+
+    <delete id="deleteStuInfo" parameterType="int">
+        delete from StuInfo where Id=#{id}
+    </delete>
+
+    <!-- parameterType属性指明查询时使用的参数类型 -->
+    <select id="selectStuInfoById" parameterType="int" resultMap="modelMap">
+        select * from StuInfo where Id=#{id}
+    </select>
+
+    <select id="selectAllStuInfo" resultMap="modelMap">
+        select * from StuInfo
+    </select>
+
+    <select id="selectStuInfoByName" parameterType="String" resultMap="modelMap">
+        select * from StuInfo where Name=#{name}
+    </select>
+
+</mapper>

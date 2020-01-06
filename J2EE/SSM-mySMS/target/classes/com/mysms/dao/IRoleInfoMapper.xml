@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 关联的mapper对象 -->
+<mapper namespace="com.mysms.dao.IRoleInfoDao">
+
+    <!-- 自定义返回结果集 -->
+    <resultMap id="modelMap" type="com.mysms.model.FunctionInfo">
+        <id property="id" column="Id" javaType="java.lang.Integer"/>
+        <result property="code" column="code" javaType="java.lang.String"/>
+        <result property="name" column="name" javaType="java.lang.String"/>
+    </resultMap>
+ 
+
+    <select id="getFunctions" parameterType="int" resultMap="modelMap">
+        select * from FunctionInfo where Id in (select FunctionInfoId from role_function where RoleInfoId=#{roleId})
+    </select>
+
+
+</mapper>

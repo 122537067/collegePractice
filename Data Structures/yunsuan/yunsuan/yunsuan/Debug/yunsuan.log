@@ -1,0 +1,5 @@
+﻿  yunsuanfu.cpp
+c:\users\bin\desktop\大二\数据结构\实验4表达式\yunsuan\yunsuan\yunsuanfu.cpp(22): warning C4101: “topdata”: 未引用的局部变量
+c:\users\bin\desktop\大二\数据结构\实验4表达式\yunsuan\yunsuan\yunsuanfu.cpp(22): warning C4101: “ch”: 未引用的局部变量
+c:\users\bin\desktop\大二\数据结构\实验4表达式\yunsuan\yunsuan\yunsuanfu.cpp(142): warning C4715: “Execute”: 不是所有的控件路径都返回值
+  yunsuan.vcxproj -> C:\Users\BIN\Desktop\大二\数据结构\实验4表达式\yunsuan\Debug\yunsuan.exe

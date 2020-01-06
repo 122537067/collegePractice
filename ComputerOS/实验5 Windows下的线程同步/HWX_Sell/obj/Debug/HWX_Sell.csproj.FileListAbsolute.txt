@@ -1,0 +1,6 @@
+E:\ComputerOS\实验5 Windows下的线程同步\HWX_Sell\bin\Debug\HWX_Sell.exe.config
+E:\ComputerOS\实验5 Windows下的线程同步\HWX_Sell\bin\Debug\HWX_Sell.exe
+E:\ComputerOS\实验5 Windows下的线程同步\HWX_Sell\bin\Debug\HWX_Sell.pdb
+E:\ComputerOS\实验5 Windows下的线程同步\HWX_Sell\obj\Debug\HWX_Sell.csprojResolveAssemblyReference.cache
+E:\ComputerOS\实验5 Windows下的线程同步\HWX_Sell\obj\Debug\HWX_Sell.exe
+E:\ComputerOS\实验5 Windows下的线程同步\HWX_Sell\obj\Debug\HWX_Sell.pdb

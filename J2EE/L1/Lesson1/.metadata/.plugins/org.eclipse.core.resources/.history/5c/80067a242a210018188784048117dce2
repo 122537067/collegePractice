@@ -1,0 +1,55 @@
+package com.test;
+
+import java.io.*;
+import java.net.*;
+
+public class Test 
+{
+	public static void main(String args[]) throws Exception
+	{
+		ServerSocket serverSocket = new ServerSocket(9001); //创建绑定到 端口：9000 的服务器套接字
+		System.out.println("等待浏览器连接端口....");
+		//System.out.println(serverSocket);  //output:ServerSocket[addr=0.0.0.0/0.0.0.0,localport=9001]
+		
+		Socket socket = serverSocket.accept();  //侦听并接受到此套接字的连接
+		System.out.println("连接端口："+socket.getPort());
+		//System.out.println(socket); //output:Socket[addr=/0:0:0:0:0:0:0:1,port=55166,localport=9001]
+		
+		InputStream in = socket.getInputStream();  //得到从服务器端发回的数据
+		BufferedReader br = new BufferedReader(new InputStreamReader(in));  //缓冲服务器发来的数据
+		
+		OutputStream socketOut = socket.getOutputStream();  //得到发送数据给服务器
+		PrintWriter pw = new PrintWriter(socketOut,true);   //通过socketOut创建
+
+		char[] buf = new char[1024];
+		br.read(buf);  //读取服务器发来的数据
+		
+		String request = new String(buf);
+		System.out.println(request);
+		
+		FileInputStream fileIn = null;  //创建文件字节读取流
+		String firstLineOfRequest = request.substring(0,request.indexOf("\r\n"));  //读取0-换行的字符
+		System.out.println("第一行请求信息："+firstLineOfRequest);
+		
+		if(firstLineOfRequest.indexOf("login.html")!=-1)
+		{
+			fileIn = new FileInputStream("login.html");
+			System.out.println(fileIn);
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,6 @@
+E:\C#\SellTicket\SellTicket\test\bin\Debug\test.exe.config
+E:\C#\SellTicket\SellTicket\test\bin\Debug\test.exe
+E:\C#\SellTicket\SellTicket\test\bin\Debug\test.pdb
+E:\C#\SellTicket\SellTicket\test\obj\Debug\test.csprojResolveAssemblyReference.cache
+E:\C#\SellTicket\SellTicket\test\obj\Debug\test.exe
+E:\C#\SellTicket\SellTicket\test\obj\Debug\test.pdb
